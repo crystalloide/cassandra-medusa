@@ -733,7 +733,7 @@ docker exec cassandra04 medusa backup --backup-name=sauvegarde_initiale
 Depuis la machine hôte, explorer le répertoire de sauvegarde :
 
 ```bash
-ls -la ${PWD}/docker/medusa_sauvegarde/
+ls -la ~/cassandra-medusa/docker/medusa_sauvegarde/
 ```
 
 Résultat attendu :
@@ -743,7 +743,7 @@ cassandra_backups/
 ```
 
 ```bash
-ls -la ${PWD}/docker/medusa_sauvegarde/cassandra_backups/
+ls -la ~/cassandra-medusa/docker/medusa_sauvegarde/cassandra_backups/
 ```
 
 Résultat attendu (un répertoire pour le cluster formation) :
@@ -756,7 +756,7 @@ drwxr-xr-x 7 root root 4096 Mar 21 19:22 formation
 ```
 
 ```bash
-ls -la ${PWD}/docker/medusa_sauvegarde/cassandra_backups/formation/
+ls -la ~/cassandra-medusa/docker/medusa_sauvegarde/cassandra_backups/formation/
 ```
 
 Résultat attendu (un répertoire par nœud + index) :
@@ -773,7 +773,7 @@ drwxr-xr-x 4 root root 4096 Mar 21 19:49 index
 ##### Examiner le contenu de la sauvegarde du nœud cassandra01 :
 
 ```bash
-ls -la ${PWD}/docker/medusa_sauvegarde/cassandra_backups/formation/10.17.64.5/
+ls -la ~/cassandra-medusa/docker/medusa_sauvegarde/cassandra_backups/formation/10.17.64.5/
 ```
 
 ```
@@ -783,7 +783,7 @@ drwxr-xr-x 3 root root 4096 Mar 21 19:17 sauvegarde_initiale
 ```
 
 ```bash
-ls -la ${PWD}/docker/medusa_sauvegarde/cassandra_backups/formation/10.17.64.5/sauvegarde_initiale/meta/
+ls -la ~/cassandra-medusa/docker/medusa_sauvegarde/cassandra_backups/formation/10.17.64.5/sauvegarde_initiale/meta/
 ```
 ```
 -rw-r--r-- 1 root root    12 Mar 21 19:17 differential
@@ -986,6 +986,7 @@ EXIT;
 
 NODE=cassandra01
 BACKUP=sauvegarde_v2
+PWD=~/cassandra-medusa
 
 docker exec ${NODE} nodetool drain
 docker stop ${NODE}
