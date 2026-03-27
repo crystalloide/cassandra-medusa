@@ -503,7 +503,6 @@ cat /etc/medusa/medusa.ini
 
 ##### Contenu du fichier de configuration pour cassandra01 : 
 ```Affichage
-
 [cassandra]
 ; l'arrêt et la relance de Cassandra sont géré en dehors de Medusa
 stop_cmd = true
@@ -614,7 +613,7 @@ exit
 
 ---
 
-##### Suppression de sauvegardes Medusa (en cas de tentatives successives pour le TP par exmeple)
+##### Suppression de sauvegardes Medusa (en cas de tentatives successives pour tester comme ici)
 ```bash
 sudo rm -rf ${PWD}/docker/medusa_sauvegarde/cassandra_backups/formation/
 ```
