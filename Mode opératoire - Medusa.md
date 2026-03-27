@@ -501,10 +501,13 @@ docker exec -it cassandra01 bash
 cat /etc/medusa/medusa.ini
 ```
 
-```bash
-docker exec -it cassandra01 bash
-root@cassandra01:/# cat /etc/medusa/medusa.ini
+##### Contenu du fichier de configuration pour cassandra01 : 
+```Affichage
+
 [cassandra]
+; l'arrêt et la relance de Cassandra sont géré en dehors de Medusa
+stop_cmd = true
+start_cmd = true
 ; Chemin vers cassandra.yaml (volume conf monté dans le conteneur)
 config_file = /opt/cassandra/conf/cassandra.yaml
 
