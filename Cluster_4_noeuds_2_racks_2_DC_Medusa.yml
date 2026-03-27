@@ -1,3 +1,9 @@
+networks:
+  cassandra_network:
+    ipam:
+      config:
+        - subnet: 10.17.64.0/24
+
 services:
   cassandra01:
     #image: docker.io/library/cassandra:latest
