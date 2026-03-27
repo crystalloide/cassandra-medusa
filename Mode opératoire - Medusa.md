@@ -97,8 +97,8 @@ mkdir -p ~/cassandra-medusa/docker/cassandra01-conf ~/cassandra-medusa/docker/ca
 ##### 1.2 Création du répertoire de sauvegarde sur l'hôte
 
 ```bash
-mkdir -p ${PWD}/docker/medusa_sauvegarde
-chmod 777 ${PWD}/docker/medusa_sauvegarde
+mkdir -p ~/cassandra-medusa/docker/medusa_sauvegarde
+chmod 777 ~/cassandra-medusa/docker/medusa_sauvegarde
 ```
 
 ##### On affiche les répertoires créés :
