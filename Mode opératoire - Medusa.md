@@ -1003,9 +1003,9 @@ docker run --rm \
   -v ${PWD}/medusa-conf/cassandra01/medusa.ini:/etc/medusa/medusa.ini \
   cassandra-medusa:latest \
   bash -c "
-    apt-get update -qq &&
-    apt-get install -y python3-pip python3-dev gcc sudo -qq &&
-    pip3 install cassandra-medusa --break-system-packages -q &&
+    # apt-get update -qq &&
+    # apt-get install -y python3-pip python3-dev gcc sudo -qq &&
+    # pip3 install cassandra-medusa --break-system-packages -q &&
     medusa restore-node --backup-name=${BACKUP}
   "
 
