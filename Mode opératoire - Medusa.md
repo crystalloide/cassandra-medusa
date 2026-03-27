@@ -615,7 +615,7 @@ exit
 
 ##### Suppression de sauvegardes Medusa (en cas de tentatives successives pour tester comme ici)
 ```bash
-sudo rm -rf ${PWD}/docker/medusa_sauvegarde/cassandra_backups/formation/
+sudo rm -rf ~/cassandra-medusa/docker/medusa_sauvegarde/cassandra_backups/formation/
 ```
 
 ##### Étape 6 — Sauvegarde différentielle de chaque nœud
