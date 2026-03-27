@@ -53,6 +53,7 @@ sudo systemctl disable ufw
 ```bash
 cd ~
 sudo rm -Rf ~/cassandra-medusa
+PWD=~/cassandra-medusa
 ```
 
 #### Ici, on va simplement cloner le projet :
