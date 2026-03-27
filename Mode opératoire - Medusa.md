@@ -39,6 +39,32 @@ Machine hôte
 
 ---
 
+#### Étape 1 : Préparation de l'environnement
+
+```bash
+cd ~
+# A ne pas faire en production évidemment : 
+sudo systemctl stop apparmor
+sudo systemctl stop ufw
+sudo systemctl disable apparmor
+sudo systemctl disable ufw
+```
+
+```bash
+cd ~
+sudo rm -Rf ~/cassandra-medusa
+```
+
+#### Ici, on va simplement cloner le projet :
+```bash
+git clone https://github.com/crystalloide/cassandra-medusa
+
+cd ~/cassandra-reaper
+```
+
+##### Construction image docker avec Medusa intégré, à partir de l'image officielle Cassandra : 
+
+```
 ##### Pré-requis — Construction d'une image docker Cassandra avec Medusa installé :
 ```bash
 cat > Dockerfile-cassandra-medusa << 'EOF'
@@ -58,12 +84,7 @@ docker build -t cassandra-medusa:latest -f Dockerfile-cassandra-medusa .
 ```
 
 
-
-
-##### Étape 1 — Arrêt du cluster et mise à jour du docker-compose.yml
-
-
-##### Recréation des répertoires pour les volumes persistés :
+##### (Re)création des répertoires pour les volumes persistés :
 ```bash
 sudo rm -Rf ~/cassandra-medusa/docker/cassandra*
 mkdir -p ~/cassandra-medusa/docker/cassandra01 ~/cassandra-medusa/docker/cassandra02 ~/cassandra-medusa/docker/cassandra03 ~/cassandra-medusa/docker/cassandra04
@@ -95,7 +116,7 @@ medusa_sauvegarde
 
 ##### 1.3 Description du fichier docker compose enrichi pour Medusa : 
 
-On ajoute le volume de sauvegarde `medusa_sauvegarde` à **chacun des 4 services** Cassandra
+On a ajouté le volume de sauvegarde `medusa_sauvegarde` à **chacun des 4 services** Cassandra
 
 Voici le fichier complet  :
 ```bash
