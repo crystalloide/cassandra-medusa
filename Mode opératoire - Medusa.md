@@ -56,16 +56,16 @@ sudo rm -Rf ~/cassandra-medusa
 ```
 
 #### Ici, on va simplement cloner le projet :
+
 ```bash
 git clone https://github.com/crystalloide/cassandra-medusa
 
 cd ~/cassandra-reaper
 ```
+#### Pré-requis — Construction d'une image docker Cassandra avec Medusa installé :
 
 ##### Construction image docker avec Medusa intégré, à partir de l'image officielle Cassandra : 
 
-```
-##### Pré-requis — Construction d'une image docker Cassandra avec Medusa installé :
 ```bash
 cat > Dockerfile-cassandra-medusa << 'EOF'
 FROM cassandra:latest
