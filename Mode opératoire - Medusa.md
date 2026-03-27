@@ -368,20 +368,20 @@ docker exec cassandra01 nodetool status
 
 ```
 Datacenter: archivage-db
-================
+========================
 Status=Up/Down
 |/ State=Normal/Leaving/Joining/Moving
---  Address          Load        Tokens  Owns (effective)  Host ID                               Rack
-UN  10.17.64.5  119.82 KiB  16      49.4%             b17400a7-f794-4846-8c88-e10456ada87a  rack1
-UN  10.17.64.6  80.06 KiB   16      49.6%             2591d643-2404-4335-b1f2-4d960cbe5e5b  rack1
+--  Address     Load        Tokens  Owns (effective)  Host ID                               Rack
+UN  10.17.64.6  85.11 KiB   16      49.0%             5aae22a7-dc38-4181-8eb5-a8b687c5f718  rack1
+UN  10.17.64.5  119.83 KiB  16      49.8%             d8d41874-5ffb-4717-9be5-28837669ca63  rack1
 
 Datacenter: archivage-db-PRA
-=================================
+============================
 Status=Up/Down
 |/ State=Normal/Leaving/Joining/Moving
---  Address          Load        Tokens  Owns (effective)  Host ID                               Rack
-UN  10.17.64.7  114.63 KiB  16      49.9%             d9198335-ffd7-429d-88c8-e990cfca3386  rack2
-UN  10.17.64.8  85.19 KiB   16      51.2%             bb60dc31-4bf9-47e7-b701-38d7166b05da  rack2
+--  Address     Load        Tokens  Owns (effective)  Host ID                               Rack
+UN  10.17.64.7  80.05 KiB   16      51.2%             abe748c2-ab52-4ef7-8cb8-135a6d4753bb  rack2
+UN  10.17.64.8  114.64 KiB  16      49.9%             1af729fb-8730-43a0-a2bf-493525b11476  rack2
 ```
 
 ---
